@@ -1,7 +1,7 @@
 - title : Level Up Your Library Development
 - description : Use Project Scaffold to go from zero to professional-grade library in a matter of minutes.
 - author : Paulmichael Blasucci
-- theme : Blood
+- theme : blood
 - transition : slide
 
 ***
@@ -74,6 +74,7 @@ twitter.com [/pblasucci](http://twitter.com/pblasucci)
 
 #### FSharp.Formatting
 
+    [lang=markdown]
     # First-level heading
 
       [hide]
@@ -102,7 +103,8 @@ twitter.com [/pblasucci](http://twitter.com/pblasucci)
 
 #### FAKE - F# Make
 
-  	#r "tools/FAKE/tools/FakeLib.dll" // include Fake lib
+    [lang=fsharp]
+    #r "../packages/FAKE/tools/FakeLib.dll" // include Fake lib
   	open Fake
 
 
