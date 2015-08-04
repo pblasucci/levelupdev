@@ -31,6 +31,12 @@ twitter.com [/pblasucci](http://twitter.com/pblasucci)
 
 #### Project Scaffold
 
+![ProjectScaffold](images/scaffold_doc.png)
+
+---
+
+#### Project Scaffold
+
 ---------------------------------------------------------------|---------------------------
 [Paket](http://fsprojects.github.io/Paket/)                    | _dependency management_
 [F# Formatting](http://tpetricek.github.io/FSharp.Formatting/) | _literate documentation_
