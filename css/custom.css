@@ -1,0 +1,9 @@
+.reveal section img {
+  width: 35%;
+  border-width: 0;
+}
+
+.reveal .subhead {
+  color: #777;
+  font-size: 0.6em;
+}

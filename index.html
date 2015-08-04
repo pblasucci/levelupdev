@@ -1,0 +1,353 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Level Up Your Library Development</title>
+    <meta name="description" content="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes.">
+    <meta name="author" content="Paulmichael Blasucci">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="//code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css" id="theme">
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/deedle.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="fsharp.formatting/styles/tips.js" type="text/javascript"></script>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/fsreveal.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script language="javascript" type="text/javascript">
+        function init()
+        {
+            websocket = new WebSocket("ws://localhost:8083/websocket");
+            websocket.onmessage = function(evt) { location.reload(); };
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section >
+
+<section >
+
+<hr/>
+
+<h3>Level Up Your</h3>
+
+<h3>Library Development</h3>
+
+<hr/>
+
+<div class="subhead">From zero to professional-grade library in a matter of minutes with Project Scaffold</div>
+
+</section>
+
+<section author="Paulmichael Blasucci" description="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes." theme="blood" title="Level Up Your Library Development" transition="slide">
+
+<h3>Paulmichael Blasucci</h3>
+
+<p>Senior Software Engineer</p>
+
+<p><img src="images/QL.png" alt="QuickenLoans" /></p>
+
+<p>github.com <a href="http://github.com/pblasucci">/pblasucci</a></p>
+
+<p>twitter.com <a href="http://twitter.com/pblasucci">/pblasucci</a></p>
+
+</section>
+
+</section>
+
+<section >
+
+<section >
+
+<h4>Project Scaffold</h4>
+
+<p><img src="images/scaffold_doc.png" alt="ProjectScaffold" /></p>
+
+</section>
+
+<section author="Paulmichael Blasucci" description="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes." theme="blood" title="Level Up Your Library Development" transition="slide">
+
+<h4>Project Scaffold</h4>
+
+<table>
+<tbody>
+<tr class="odd">
+<td><p><a href="http://fsprojects.github.io/Paket/">Paket</a></p></td>
+<td><p><em>dependency management</em></p></td>
+</tr>
+<tr class="even">
+<td><p><a href="http://tpetricek.github.io/FSharp.Formatting/">F# Formatting</a></p></td>
+<td><p><em>literate documentation</em></p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="http://fsharp.github.io/FAKE/">FAKE</a></p></td>
+<td><p><em>build management</em></p></td>
+</tr>
+</tbody>
+</table>
+
+
+<aside class="notes">
+<ul><br/>
+<li>Recommended directory structure and collection of libraries</li><br/>
+<li>Powered by two F# scripts (build.fsx and generate.fsx)</li><br/>
+<li>Includes 1st-run wizard to help get things sorted</li><br/>
+</ul><br/>
+</aside>
+
+</section>
+
+<section author="Paulmichael Blasucci" description="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes." theme="blood" title="Level Up Your Library Development" transition="slide">
+
+<h4>Paket</h4>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="c">// NuGet packages</span>
+<span class="i">nuget</span> <span class="i">NUnit</span> <span class="o">~&gt;</span> <span class="n">2.6</span><span class="o">.</span><span class="n">3</span>
+<span class="i">nuget</span> <span class="i">FAKE</span> <span class="o">~&gt;</span> <span class="n">3.4</span>
+<span class="i">nuget</span> <span class="i">DotNetZip</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">1.9</span>
+<span class="i">nuget</span> <span class="i">SourceLink</span><span class="o">.</span><span class="i">Fake</span>
+
+<span class="c">// Files from GitHub repositories</span>
+<span class="i">github</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span> <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span>
+
+<span class="c">// Gist files</span>
+<span class="i">gist</span> <span class="i">Thorium</span><span class="o">/</span><span class="n">1972349</span> <span class="i">timestamp</span><span class="o">.</span><span class="i">fs</span>
+
+<span class="c">// HTTP resources</span>
+<span class="i">http</span> <span class="i">http</span><span class="o">:</span><span class="c">//www.fssnip.net/1n decrypt.fs</span>
+</code></pre></td>
+</tr>
+</table>
+
+<aside class="notes">
+<ul><br/>
+<li>"NuGet does not separate out the concept of transitive dependencies..."</li><br/>
+<li>"If two packages reference conflicting versions of a package, NuGet will silently take the latest version..."</li><br/>
+<li>"Paket on the other hand... enables you to determine exactly what's happening with your dependencies."</li><br/>
+<li>"Paket also enables one to reference files directly from GitHub repositories, Gists and HTTP."</li><br/>
+</ul><br/>
+</aside>
+
+</section>
+
+<section author="Paulmichael Blasucci" description="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes." theme="blood" title="Level Up Your Library Development" transition="slide">
+
+<h4>FSharp.Formatting</h4>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="markdown"># First-level heading
+
+  [hide]
+  let print s = printfn "%s" s
+
+Some more documentation using `Markdown`.
+
+  [module=Hello]
+  let helloWorld() = print "Hello world!"
+
+## Second-level heading
+With some more documentation
+
+  [lang=csharp]
+  var name = Console.ReadLine();
+  Console.WriteLine("Hello, {0}!", name);
+</code></pre></td></tr></table>
+
+<aside class="notes">
+<ul><br/>
+<li>Literate programming - generate narrative documentation</li><br/>
+<li>Embed results of a literate script file in the generated output</li><br/>
+<li>Generates nice HTML documentation from "XML comments" in your (not just) F# libraries</li><br/>
+<li>Basis for more sophisticated tools (e.g. FsBlob, FsReveal)</li><br/>
+</ul><br/>
+</aside>
+
+</section>
+
+<section author="Paulmichael Blasucci" description="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes." theme="blood" title="Level Up Your Library Development" transition="slide">
+
+<h4>FAKE - F# Make</h4>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="prep">#r</span> <span class="s">&quot;../packages/FAKE/tools/FakeLib.dll&quot;</span> <span class="c">// include Fake lib</span>
+<span class="k">open</span> <span class="i">Fake</span>
+
+
+<span class="i">Target</span> <span class="s">&quot;Test&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
+    <span class="i">trace</span> <span class="s">&quot;Testing stuff...&quot;</span>
+)
+
+<span class="i">Target</span> <span class="s">&quot;Deploy&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
+    <span class="i">trace</span> <span class="s">&quot;Heavy deploy action&quot;</span>
+)
+
+<span class="s">&quot;Test&quot;</span>            <span class="c">// define the dependencies</span>
+   <span class="o">==&gt;</span> <span class="s">&quot;Deploy&quot;</span>
+
+<span class="i">Run</span> <span class="s">&quot;Deploy&quot;</span>
+</code></pre></td>
+</tr>
+</table>
+
+<aside class="notes">
+<ul><br/>
+<li>Targets, the main unit of work, have a name and an action (given as an F# code block)</li><br/>
+<li>Filesets = similar include and exclude patterns as NAnt and MSBuild</li><br/>
+<li>Includes dozens of dozens of "helpers" (collections of utility functions): assembly info, et cetera</li><br/>
+</ul><br/>
+</aside>
+
+</section>
+
+<section author="Paulmichael Blasucci" description="Use Project Scaffold to go from zero to professional-grade library in a matter of minutes." theme="blood" title="Level Up Your Library Development" transition="slide">
+
+<h4>Also "in the box"</h4>
+
+<ul>
+<li>Track changes with the <a href="http://fsharp.github.io/FAKE/apidocs/fake-releasenoteshelper.html">Release Notes Helper</a></li>
+<li>Hooked into <a href="http://github.com/">GitHub</a> for project hosting</li>
+<li><a href="http://www.nunit.org/">NUnit</a> configured for unit-test execution</li>
+<li>Source-linking enabled via <a href="http://ctaggart.github.io/SourceLink/">SourceLink</a></li>
+<li>Ready for CI servers (<a href="https://travis-ci.org/">Travis</a>, <a href="http://www.appveyor.com/">AppVeyor</a>)</li>
+</ul>
+
+</section>
+
+</section>
+
+<section >
+
+<h3>Walkthrough</h3>
+
+</section>
+
+<section >
+
+<h3>More Information</h3>
+
+<ul>
+<li><p><a href="http://fsharp.org">fsharp.org</a></p></li>
+<li><p><a href="http://github.com/fsprojects/ProjectScaffold">github.com/fsprojects/ProjectScaffold</a></p></li>
+<li><a href="http://fsprojects.github.io/Paket">fsprojects.github.io/Paket</a></li>
+<li><a href="http://tpetricek.github.io/FSharp.Formatting">tpetricek.github.io/FSharp.Formatting</a></li>
+<li><a href="http://fsharp.github.io/FAKE">fsharp.github.io/FAKE</a></li>
+</ul>
+
+</section>
+
+
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Add the nohighlight class and data-noescape attribute to code elements that have already been formatted by FSharp.Formatting
+        $('pre.highlighted code').addClass('nohighlight').attr('data-noescape', '');
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+</body>
+</html>
+
